@@ -1,0 +1,392 @@
+<?php
+// Query params are: utm_placement={{placement}}&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}&adset_name={{adset.name}}&utm_creative={{ad.name}}&utm_campaign={{campaign.name}}&utm_source={{site_source_name}} 
+
+require_once dirname(__FILE__) . '/kclient.php';
+$client = new KClient('https://blackwordstrack.ru/api.php?', 'C8gXPhDv2FC1DCHL');
+$client->sendAllParams();       // to send all params from page query
+$client->forceRedirectOffer();       // redirect to offer if an offer is chosen
+// $client->param('sub_id_5', '123'); // you can send any params
+// $client->keyword('PASTE_KEYWORD');  // send custom keyword
+// $client->currentPageAsReferrer(); // to send current page URL as click referrer
+// $client->disableSessions(); // to disable using session cookie (without this cookie restoreFromSession wouldn't work)
+// $client->debug();              // to enable debug mode and show the errors
+// $client->execute();             // request to api, show the output and continue
+$client->executeAndBreak();     // to stop page execution if there is redirect or some output
+?>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Booty WoW - накачай и сделай попу упругой всего за 30 дней!</title>
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pay.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no"><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+	
+  </head>
+  <body>
+      <header class="header">
+        <div class="header__inner container"><a class="header__logo" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>"><img src="img/logo.png" alt="логотип booty wow"></a><a class="header__enter js-enter-btn" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>">Купить за 29 руб.</a></div>
+      </header>
+      <div class="main">
+        <div class="main__inner container">
+          <div class="main__text">Умный фитнес для красоты и здоровья</div>
+          <h1 class="main__title">Накачай и сделай попу упругой всего за 30 дней!</h1>
+          <div class="main__subtitle">Упругие и шикарные ягодицы всего за 30 дней без скучных приседаний!</div>
+            <div class="ad">
+              <div class="ad__block">
+                <p class="ad__text">В подарок за подписку на курс вы получите <mark>бесплатный гайд</mark> по созданию <span>креативных сторис в Instagram</span></p><img class="ad__img" src="img/promo-icon-gift.png" alt="подарок">
+              </div>
+            </div>
+          <div class="main__text-form">Один шаг и вам открыт доступ к курсу:</div><a class="main__link btn" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>">Купить за 29 руб.</a>
+        </div>
+      </div>
+      <div class="advantages">
+        <div class="advantages__wrapper">
+          <div class="advantages__inner container">
+            <div class="advantages__block">
+              <div class="advantages__item"> <img class="advantages__img" src="img/advantages-icon-peach.png" alt="">
+                <div class="advantages__text">Ягодицы с эффектом пушап</div>
+              </div>
+              <div class="advantages__item"> <img class="advantages__img" src="img/advantages-icon-darts.png" alt="">
+                <div class="advantages__text">Стройное тело и увереннность в себе</div>
+              </div>
+              <div class="advantages__item"> <img class="advantages__img" src="img/advantages-icon-keto.png" alt="">
+                <div class="advantages__text">Безопасный научный подход</div>
+              </div>
+              <div class="advantages__item"> <img class="advantages__img" src="img/advantages-icon-woman.png" alt="">
+                <div class="advantages__text">Любая одежда и внимание мужчин</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="questions">
+        <div class="questions__inner container">
+          <div class="questions__block">
+            <div class="questions__item"> <img class="questions__img" src="img/questions-smile1.png" alt="смайл">
+              <div class="questions__text">1. Не хватает<br> мотивации?</div><img class="questions--bg1" src="img/main-peach.png" alt="">
+            </div>
+            <div class="questions__item"> <img class="questions__img" src="img/questions-smile2.png" alt="смайл">
+              <div class="questions__text">2. Не знаете<br> причину набора веса?</div><img class="questions--bg2" src="img/main-fire.png" alt="">
+            </div>
+            <div class="questions__item"> <img class="questions__img" src="img/questions-smile3.png" alt="смайл">
+              <div class="questions__text">3. Много приседаете,<br> а результата нет?</div><img class="questions--bg3" src="img/main-peach.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="course">
+        <div class="course__inner container">
+          <h2 class="course__title">Курс упругой попы это...</h2>
+          <div class="course__subtitle">Тренировки в формате — повторяй за мной на 30 дней</div>
+          <p class="course__descr">Еженедельно вам будут открываться новые тренировки, которые можно выполнить в любое время, когда вам удобно. В среднем тренировки занимают 20–30 минут в день. Просто включайте видео и повторяйте. В программу включены тренировки на разные части тела, но упор сделан на ягодицы и ноги.</p><img class="course__img" src="img/course-peach.png" alt="">
+        </div>
+      </div>
+      <div class="receive">
+        <div class="receive__inner container">
+          <h2 class="receive__title">пройдя программу вы получите</h2>
+          <ul class="receive__list">
+            <li class="receive__item">Идеально упругие ягодицы благодаря полноценному комплексу</li>
+            <li class="receive__item">Подтянутое, сильное тело без целлюлита</li>
+            <li class="receive__item">Апгрейд своих ежедневных привычек, которые помогут остаться молодой и красивой долгие годы</li>
+            <li class="receive__item">Восхищенные взгляды, внимание и комплименты от мужского пола</li>
+            <li class="receive__item">Уникальные упражнения, которые вы сможете делать самостоятельно, затратив минимум усилий</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wont">
+        <div class="wont__inner container">
+          <div class="wont__wrapper">
+            <h2 class="wont__title">В этой программе не будет</h2>
+            <div class="wont__block">
+              <div class="wont__item"> <img class="wont__img" src="img/wont-icon1.png" alt="">
+                <div class="wont__text">Бесконечных приседаний по 100 повторов</div>
+              </div>
+              <div class="wont__item"> <img class="wont__img" src="img/wont-icon2.png" alt="">
+                <div class="wont__text">Больших весов и избыточной нагрузки</div>
+              </div>
+              <div class="wont__item"> <img class="wont__img" src="img/wont-icon3.png" alt="">
+                <div class="wont__text">Сложного инвентаря и непонятных упражнений</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="registration">
+        <div class="registration__inner container">
+          <div class="registration__wrapper">
+            <div class="registration__container">
+              <div class="registration__text">Зарегистрируйтесь и получите доступ к курсу</div><a class="registration__link btn" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>">Попробовать за 29 руб.</a>
+            </div>
+            <div class="registration__block">
+              <h2 class="registration__title">Стань лучшей версией себя</h2>
+              <div class="registration__subtitle">30 дней горячей работы над ягодицами</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="classes">
+        <div class="classes__inner container">
+          <div class="classes__title">Как будут проходить занятия</div>
+          <div class="classes__block">
+            <div class="classes__item"> <img class="classes__img" src="img/classes-icon-card.png" alt="">
+              <h3 class="classes__item-title">Оплачиваете курс</h3>
+              <p class="classes__text">
+                После оплаты вы получите на свой e-mail логин и пароль от личного кабинета
+                с тренировками. Уроки можно смотреть
+                на компьютере или на телефоне.
+              </p>
+            </div>
+            <div class="classes__item"> <img class="classes__img" src="img/classes-icon-rocket.png" alt="">
+              <h3 class="classes__item-title">Заходите на платформу</h3>
+              <p class="classes__text">
+                Все уроки можно ставить на паузу, перематывать и смотреть в любое <br>
+                удобное время.
+              </p>
+            </div>
+            <div class="classes__item"><img class="classes__img" src="img/classes-icon-laptop.png" alt="">
+              <h3 class="classes__item-title">Смотрите уроки</h3>
+              <p class="classes__text">
+                Тренировка проходит <br>в виде повторения за тренером. <br>
+                Вы просто смотрите на экран и повторяете.
+                Техника каждого упражнения <br>
+                объясняется подробно.
+              </p>
+            </div>
+            <div class="classes__item"><img class="classes__img" src="img/classes-icon-glasses.png" alt="">
+              <h3 class="classes__item-title">Ведете отчетность<br> в личном кабинете </h3>
+              <p class="classes__text">Следите за динамикой веса, <br>количеством выпитой воды и отмечаете выполненные тренировки.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="platform">
+        <div class="platform__inner container">
+          <div class="platform__block">
+            <h2 class="platform__title">Удобная платформа для тренировок</h2>
+            <p class="platform__text">
+              Все тренировки, рекомендации по питанию и ваш личный кабинет будут доступны на ПК и в мобильном
+              приложении. Вам не нужно делать закладку в браузере
+              или искать наш сайт, платформа для тренировок
+              расположится прямо на дисплее вашего устройства:
+              смартфона, планшета.
+            </p><a class="platform__link" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>">Начать за 29 руб.</a>
+          </div>
+        </div>
+      </div>
+      <div class="whatget">
+        <div class="whatget__inner container">
+          <div class="whatget__title">Что получите с курсом?</div>
+          <div class="whatget__block">
+            <div class="whatget__item">
+              <div class="whatget__img"><img class="whatget__icon1" src="img/whatget-icon-1.png" alt=""></div>
+              <div class="whatget__text whatget__text--margin">Антицеллюлитный гайд</div>
+            </div>
+            <div class="whatget__item">
+              <div class="whatget__img"><img class="whatget__icon2" src="img/whatget-icon-2.png" alt=""></div>
+              <div class="whatget__text">Интенсивная тренировка в видео-формате</div>
+            </div>
+            <div class="whatget__item">
+              <div class="whatget__img"><img class="whatget__icon3" src="img/whatget-icon-3.png" alt=""></div>
+              <div class="whatget__text">Рецепты<br> SPA-процедур для ягодиц</div>
+            </div>
+            <div class="whatget__item">
+              <div class="whatget__img"><img class="whatget__icon4" src="img/whatget-icon-4.png" alt=""></div>
+              <div class="whatget__text">Калькулятор веса и калорий</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="result__inner container">
+          <div class="result__title">В результате Вы:</div>
+          <div class="result__wrapper" id="result">
+            <div class="result__block">
+              <div class="result__block-text">
+                <div class="result__item">Полюбите себя и свое тело еще больше.</div>
+                <div class="result__item">Узнаете самые действенные методы борьбы с лишним весом.</div>
+                <div class="result__item">Сможете надеть абсолютно<br> любой купальник летом.</div>
+                <div class="result__item">Улучшите осанку и форму ягодиц.</div>
+                <div class="result__item">
+                  Вы научитесь тренировать ягодицы самым эффективным способом
+                  и в будущем сможете без травм <br>
+                  заниматься уже силовыми тренировками.
+                </div><img class="result__img" src="img/registration-spark.png" alt="">
+              </div>
+              <div class="result__ad">
+                <div class="result__ad-block">
+                  <p class="result__ad-text">В подарок за подписку на курс вы получите <mark>бесплатный гайд</mark> по созданию <span>креативных сторис в Instagram</span></p><img class="result__ad-img" src="img/promo-icon-gift.png" alt="подарок">
+                </div>
+              </div>
+            </div>
+            <div class="result__block-form">
+              <h3 class="result__form-title">Начни прямо сейчас!</h3>
+              <div class="result__form-subtitle">Скидка 97%</div>
+              <div class="result__form-prices">
+                  <div class="price__new result__form-price"><span class="js-new-price"> </span>&ensp;₽</div>
+                  <div class="price__text">вместо</div>
+                  <div class="price__old result__form-discount"><span class="js-old-price"> </span>&ensp;₽</div>
+              </div>
+              <div class="result__form-text">Авторский комплекс, благодаря которому ваша форма станет идеальной:</div>
+              <ul class="result__form-list">
+                <li class="result__form-item">Антицеллюлитный гайд</li>
+                <li class="result__form-item">Интенсивная тренировка в видео-формате</li>
+                <li class="result__form-item">Рецепты SPA процедур для ягодиц</li>
+                <li class="result__form-item">Калькулятор веса и калорий</li>
+              </ul>
+              <!-- <form class="form js-payform" action="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>"> -->
+               
+                
+                 <center> <a class="basketbutton2" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>">Купить за 29 руб.</a></center>
+               
+    <!--           </form> -->
+              <div class="result__icons"> <img class="result__icon" src="img/result-icon-visa.png" width="80" height="24" alt="Карта Visa"><img class="result__icon" src="img/result-icon-mir.png" width="96" height="24" alt="Карта Mир"><img class="result__icon" src="img/result-icon-mastercard.png" width="64" height="48" alt="Карта Mastercard"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        <div class="reviews__inner container">
+          <h2 class="reviews__title">Отзывы и результаты</h2>
+          <div class="reviews__slider slider">
+            <button class="slider__btn slider__btn--next"><img src="img/reviews-icon-arrow.svg" alt=""></button>
+            <div class="slider__wrapper">
+              <div class="slider__slides">
+                <div class="slider__slide">
+                  <div class="slider__top"> <img class="slider__img-avatar" src="img/reviews-icon1.png" alt="аватар">
+                    <div class="slider__top-block"> <img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда">
+                      <h3 class="slider__title">Ирина Иванова </h3>
+                    </div>
+                  </div><img class="slider__photo" src="img/reviews-img1.png" alt="фото до/после">
+                  <p class="slider__text">
+                    Результат отличный, я стала ощущать свои мышцы и вообще узнала об их существовании, похудела, попа округлилась. Очень довольна контролем за питанием,атмосферой на тренировках. Главное, заставить себя заниматься, все остальное сложится само собой. Потом уже не можешь без этого жить, тренируешься, потому что знаешь, что это меняет твоё тело, делает его прекрасным, сильным.
+                    И вот — ты другой человек)))
+                  </p>
+                </div>
+                <div class="slider__slide">
+                  <div class="slider__top"> <img class="slider__img-avatar" src="img/reviews-icon2.png" alt="аватар">
+                    <div class="slider__top-block"> <img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда">
+                      <h3 class="slider__title">Карина Лимова</h3>
+                    </div>
+                  </div><img class="slider__photo" src="img/reviews-img2.png" alt="фото до/после">
+                  <p class="slider__text">Привести себя в порядок после родов — желание многих мам. Пыталась найти информацию в интернете, но хватало максимум на неделю. Мои впечатления: помогает дисциплинированность. С таким сервисом где уже всё собрано для тебя, с учетом твоих пожеланий, сразу становится проще. Итоги за месяц тренировок: удалось сбросить вес, наладить питание, получить новую информацию, тело подтянулось, и это только начало!</p>
+                </div>
+                <div class="slider__slide">
+                  <div class="slider__top"> <img class="slider__img-avatar" src="img/reviews-icon3.png" alt="аватар">
+                    <div class="slider__top-block"> <img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда"><img class="slider__img-star" src="img/reviews-icon-star.png" alt="звезда">
+                      <h3 class="slider__title">Марина Афинова</h3>
+                    </div>
+                  </div><img class="slider__photo" src="img/reviews-img3.png" alt="фото до/после">
+                  <p class="slider__text">Недавно при росте 167 см мой вес составлял 81 кг. Всегда любила поесть, дома часто бывают застолья, потом диеты, срывы... А надо было всего лишь узнать, как правильно питаться. Сегодня мой вес 60 кг. Чтобы сбросить лишнее, конечно, пришлось попотеть. Чувствую себя отлично, особенно приятно ходить в магазин и надевать одежду размер М. Теперь я могу носить обтягивающие наряды, у меня больше нет висящих боков и животика.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="faq">
+        <div class="faq__inner container">
+          <h2 class="faq__title">Вопросы и ответы</h2>
+          <div class="faq__list">
+            <div class="faq__item">
+              <div class="faq__question faq--decor">
+                <h3 class="faq__question-text">Тренировки проходят в какое-то определённое время?</h3><img class="faq__question-icon--desktop" src="img/faq-icon-plus.svg" width="20" height="20" alt=""><img class="faq__question-icon--mobile" src="img/faq-icon-arrow.svg" width="20" height="20" alt="">
+              </div>
+              <div class="faq__answer faq--decor">Нет. Все тренировки доступны в вашем личном кабинете, поэтому время и место занятий вы выбираете сами.</div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question faq--decor">
+                <h3 class="faq__question-text">Я никогда не занималась. Подойдут ли мне тренировки?</h3><img class="faq__question-icon--desktop" src="img/faq-icon-plus.svg" width="20" height="20" alt=""><img class="faq__question-icon--mobile" src="img/faq-icon-arrow.svg" width="20" height="20" alt="">
+              </div>
+              <div class="faq__answer faq--decor">
+                Да! Наши тренировки по силам новичкам, так как они проходят в формате «повторяй за мной». Не нужно идтив зал, все занятия можно делать дома. Занятия дома подходят даже тем у кого нет времени на фитнес-клуб;
+                кому не хватает самодисциплины и мотивации; у кого нет понимания, как правильно тренироваться и питаться;
+                кому не с кем оставить ребенка.
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question faq--decor">
+                <h3 class="faq__question-text">Можно ли заменить инвентарь или обойтись без него?</h3><img class="faq__question-icon--desktop" src="img/faq-icon-plus.svg" width="20" height="20" alt=""><img class="faq__question-icon--mobile" src="img/faq-icon-arrow.svg" width="20" height="20" alt="">
+              </div>
+              <div class="faq__answer faq--decor">
+                Да, например:<br>1. Спортивный коврик = плед/полотенце. <br>
+                2. Два блока для йоги = две толстые книги.<br>
+                3. Две гантели по 1 кг = две бутылки с водой.
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question faq--decor">
+                <h3 class="faq__question-text">Я живу не в России.  Удобно ли мне будет заниматься?</h3><img class="faq__question-icon--desktop" src="img/faq-icon-plus.svg" width="20" height="20" alt=""><img class="faq__question-icon--mobile" src="img/faq-icon-arrow.svg" width="20" height="20" alt="">
+              </div>
+              <div class="faq__answer faq--decor">
+                Прелесть в том, что место, где вы живете, не имеет никакого значения. Вам понадобится лишь телефон, планшетили компьютер с доступом в интернет.</div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question faq--decor">
+                <h3 class="faq__question-text">Есть ли противопоказания для занятий?</h3><img class="faq__question-icon--desktop" src="img/faq-icon-plus.svg" width="20" height="20" alt=""><img class="faq__question-icon--mobile" src="img/faq-icon-arrow.svg" width="20" height="20" alt="">
+              </div>
+              <div class="faq__answer faq--decor">Беременность, заболевания и патологические состояния, препятствующие допуску к занятиям спортом.</div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question faq--decor">
+                <h3 class="faq__question-text">Оплатили курс, когда откроется доступ?</h3><img class="faq__question-icon--desktop" src="img/faq-icon-plus.svg" width="20" height="20" alt=""><img class="faq__question-icon--mobile" src="img/faq-icon-arrow.svg" width="20" height="20" alt="">
+              </div>
+              <div class="faq__answer faq--decor">
+                В течение 10 минут после оплаты на указанную вами электронную почту, отправляется письмо-уведомлениес подтверждением и данными для входа в личный кабинет, где находятся все материалы. После входа
+                в личный кабинет вы можете приступить к выбранной программе в любое время.
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__question faq--decor">
+                <h3 class="faq__question-text">Указали неправильную почту при оплате</h3><img class="faq__question-icon--desktop" src="img/faq-icon-plus.svg" width="20" height="20" alt=""><img class="faq__question-icon--mobile" src="img/faq-icon-arrow.svg" width="20" height="20" alt="">
+              </div>
+              <div class="faq__answer faq--decor">
+                Если при оплате вы указали неправильный электронный адрес, пожалуйста, обратитесь в службу поддержки <a href="mailto:support@mybootywow.com">support@mybootywow.com</a>, мы вышлем вам письмо с доступом повторно.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="banner__inner container">
+          <h2 class="banner__title">Стань лучшей версией себя</h2>
+          <div class="banner__subtitle">30 дней горячей работы над ягодицами</div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__item footer__item--start">
+              <div class="footer__info footer__info--legal js-legal"></div>
+            </div>
+            <div class="footer__item footer__item--middle">
+              <div class="footer__info">Принимаем к оплате:</div>
+              <div class="footer__pay"><img class="footer__img" src="img/fvisa.png" width="39"><img class="footer__img" src="img/fmc.png" width="21"><img class="footer__img" src="img/fmir.png" width="43"></div>
+              <div class="footer__info">Платеж защищен</div>
+              <div class="footer__pay"><img class="footer__img" src="img/flock.png" width="36"><img class="footer__img" src="img/flock2.png" width="31"><img class="footer__img" src="img/fsecure.png" width="18"><img class="footer__img" src="img/fpci.png" width="28"></div>
+            </div>
+            <div class="footer__item"><a class="footer__info footer__info--link footer__info--mb js-destPolicy" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>" target="_blank">Политика конфиденциальности</a><a class="footer__info footer__info--link footer__info--mb js-destOffer" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>" target="_blank">Оферта</a><a class="footer__info footer__info--link footer__info--mb js-unsubscribe" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>" target="_blank">Отменить подписку</a><a class="footer__info footer__info--link footer__info--mb js-destPermission" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>" target="_blank">Политика обработки данных</a><a class="footer__info footer__info--link footer__info--mb js-destPermission" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>" target="_blank">Тарифы</a></div>
+          </div>
+        </div>
+      </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/formValidation.js"></script>
+    <script src="js/docs.js"> </script>
+    <script src="js/pay.js"> </script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
