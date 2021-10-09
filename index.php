@@ -2,7 +2,7 @@
 // Query params are: utm_placement={{placement}}&campaign_id={{campaign.id}}&adset_id={{adset.id}}&ad_id={{ad.id}}&adset_name={{adset.name}}&utm_creative={{ad.name}}&utm_campaign={{campaign.name}}&utm_source={{site_source_name}} 
 
 require_once dirname(__FILE__) . '/kclient.php';
-$client = new KClient('https://blackwordstrack.ru/api.php?', 'C8gXPhDv2FC1DCHL');
+$client = new KClient('https://blackwordstrack.ru/api.php?', 's518nrmftqcxxdtqlvlbjnskpcnjfvs4');
 $client->sendAllParams();       // to send all params from page query
 $client->forceRedirectOffer();       // redirect to offer if an offer is chosen
 // $client->param('sub_id_5', '123'); // you can send any params
@@ -39,7 +39,7 @@ $client->executeAndBreak();     // to stop page execution if there is redirect o
   </head>
   <body>
       <header class="header">
-        <div class="header__inner container"><a class="header__logo" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>"><img src="img/logo.png" alt="логотип booty wow"></a><a class="header__enter js-enter-btn" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>">Купить за 29 руб.</a></div>
+        <div class="header__inner container"><a class="header__logo" href="https://clickfrm.com/Cd9G?utm_content=<?php echo $client->getSubId() ?>"><img src="img/logo.png" alt="логотип booty wow"></a><a class="header__enter js-enter-btn" href="https://clickfrm.com/Cd9G?utm_content=<?php echo $client->getSubId() ?>">Купить за 29 руб.</a></div>
       </header>
       <div class="main">
         <div class="main__inner container">
@@ -51,7 +51,7 @@ $client->executeAndBreak();     // to stop page execution if there is redirect o
                 <p class="ad__text">В подарок за подписку на курс вы получите <mark>бесплатный гайд</mark> по созданию <span>креативных сторис в Instagram</span></p><img class="ad__img" src="img/promo-icon-gift.png" alt="подарок">
               </div>
             </div>
-          <div class="main__text-form">Один шаг и вам открыт доступ к курсу:</div><a class="main__link btn" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>">Купить за 29 руб.</a>
+          <div class="main__text-form">Один шаг и вам открыт доступ к курсу:</div><a class="main__link btn" href="https://clickfrm.com/Cd9G?utm_content=<?php echo $client->getSubId() ?>">Купить за 29 руб.</a>
         </div>
       </div>
       <div class="advantages">
@@ -130,7 +130,7 @@ $client->executeAndBreak();     // to stop page execution if there is redirect o
         <div class="registration__inner container">
           <div class="registration__wrapper">
             <div class="registration__container">
-              <div class="registration__text">Зарегистрируйтесь и получите доступ к курсу</div><a class="registration__link btn" href="https://clickfrm.com/CaX7?utm_content=<?php echo $client->getSubId() ?>">Попробовать за 29 руб.</a>
+              <div class="registration__text">Зарегистрируйтесь и получите доступ к курсу</div><a class="registration__link btn" href="https://clickfrm.com/Cd9G?utm_content=<?php echo $client->getSubId() ?>">Попробовать за 29 руб.</a>
             </div>
             <div class="registration__block">
               <h2 class="registration__title">Стань лучшей версией себя</h2>
